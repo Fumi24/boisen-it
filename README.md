@@ -132,13 +132,6 @@ Edit `wrangler.toml` to configure:
 - Durable Object bindings
 - Environment variables
 
-## Scaling
-
-The platform is designed to handle:
-- ~3,000 daily visitors
-- Traffic spikes (e.g., Hacker News front page)
-- Global distribution via Cloudflare Edge
-- Auto-scaling with Durable Objects
 
 ## Future Enhancements
 
