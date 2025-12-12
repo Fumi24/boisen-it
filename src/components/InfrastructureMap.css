@@ -1,0 +1,22 @@
+.infrastructure-map {
+  width: 100%;
+  height: 100%;
+}
+
+.infrastructure-map svg {
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px currentColor);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px currentColor);
+  }
+}
+
+.active-node {
+  animation: glow 2s ease-in-out infinite;
+}

@@ -1,0 +1,23 @@
+name = "interactive-pipeline"
+main = "worker/index.js"
+compatibility_date = "2024-12-01"
+
+[env.production]
+name = "interactive-pipeline-prod"
+
+[[durable_objects.bindings]]
+name = "PIPELINE"
+class_name = "PipelineDurableObject"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["PipelineDurableObject"]
+
+[[kv_namespaces]]
+binding = "PIPELINE_KV"
+id = "pipeline_kv_namespace"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "pipeline_db"
+database_id = "pipeline_database"

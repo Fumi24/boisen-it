@@ -1,0 +1,102 @@
+.log-viewer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.log-container {
+  flex: 1;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  padding: 1rem;
+  overflow-y: auto;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.875rem;
+  max-height: 400px;
+}
+
+.log-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.log-container::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.log-container::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.log-container::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-blue);
+}
+
+.log-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.log-entry {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.log-entry:hover {
+  background: var(--bg-secondary);
+}
+
+.log-time {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  min-width: 80px;
+}
+
+.log-icon {
+  font-size: 1rem;
+}
+
+.log-stage {
+  color: var(--accent-purple);
+  font-weight: 600;
+  min-width: 100px;
+}
+
+.log-message {
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.log-error .log-message {
+  color: var(--accent-red);
+}
+
+.log-warning .log-message {
+  color: var(--accent-yellow);
+}
+
+.log-success .log-message {
+  color: var(--accent-green);
+}
