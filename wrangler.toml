@@ -15,9 +15,9 @@ new_classes = ["PipelineDurableObject"]
 
 [[kv_namespaces]]
 binding = "PIPELINE_KV"
-id = "pipeline_kv_namespace"
+id = "02880991d75f437b8e841ee37808087e"
 
 [[d1_databases]]
 binding = "DB"
 database_name = "pipeline_db"
-database_id = "pipeline_database"
+database_id = "dd560f98-284f-4f09-99e2-cee23e6949a5"
